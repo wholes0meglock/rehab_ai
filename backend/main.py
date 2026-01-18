@@ -16,7 +16,11 @@ from database import init_database, save_plan, get_all_plans, get_stats
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
+print("🔐 Environment variables loaded")
 # Initialize FastAPI
 app = FastAPI(title="RehabAI API")
 
