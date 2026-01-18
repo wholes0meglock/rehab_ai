@@ -47,7 +47,7 @@ export default function App() {
     formData.append('additional_notes', additionalNotes);
     
     try {
-      const response = await fetch('http://localhost:8001/api/rehab/generate-plan', {
+      const response = await fetch('https://your-backend-url.onrender.com/api/rehab/generate-plan', {
         method: 'POST',
         body: formData
       });
